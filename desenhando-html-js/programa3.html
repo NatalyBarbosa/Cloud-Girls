@@ -1,0 +1,39 @@
+<canvas width="600"  height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+
+    function exibeCirculo(evento) {
+
+        var x = evento.pageX-tela.offsetLeft; //desconsidera a borda
+        var y = evento.pageY-tela.offsetTop;
+
+        pincel.fillStyle = 'purple';
+        pincel.beginPath(); 
+        pincel.arc(x, y, 10, 0,2 * 3.14);
+        pincel.fill(); //preenche a bolinha
+        console.log(x + ',' + y);
+
+    //    alert("posição do clique : " + x + ", " + y);
+    }
+
+
+  /*  function exibeAlerta(lalala){
+
+       alert('cliquei');
+       // console.log(lalala); //dá informações do evento, do mouse, no navegador
+        //tem que ter parametro pra descobrir a posição exata do clique
+
+    }
+
+    */
+    tela.onclick = exibeAlerta;
+
+
+
+</script>

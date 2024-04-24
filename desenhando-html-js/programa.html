@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+<script>
+
+    var tela = document.querySelector('canvas'); // o document executa a função querySelector() para pegar este <canvas> e passá-lo como valor na variável tela.
+    var pincel = tela.getContext('2d');
+
+    pincel.fillStyle = 'lightgrey'//recebe uma atribuição
+    pincel.fillRect(0,0,600,400);
+
+    pincel.fillStyle = 'green';
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = 'red';
+    pincel.fillRect(400, 0, 200, 400);
+
+    pincel.fillStyle = 'yellow';
+    pincel.beginPath();
+    pincel.moveTo(300, 200); //começa a desenhar um caminho
+    pincel.lineTo(200, 400);
+    pincel.lineTo(400, 400);
+    pincel.fill();
+
+    pincel.fillStyle = 'blue'; 
+    pincel.beginPath(); //novo caminho
+    pincel.arc(300, 200, 50, 0, 2*3.14); //(x,y,raio,angulo inicial em rad, angulo final em rad)
+    pincel.fill(); //a função fill preenche a esfera
+
+
+</script>

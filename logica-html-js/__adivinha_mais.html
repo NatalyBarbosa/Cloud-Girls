@@ -1,0 +1,83 @@
+<meta charset="UTF-8">
+
+<input />
+<button>Compare seu número com o meu</button>
+
+<script>
+
+    //var numero = Math.round(Math.random()*10);
+
+
+    var input = document.querySelector("input"); //função que insere aquilo que está no mundo HTML na variável input
+    input.focus();
+
+    //var numero = [5,7,10,2,3];
+
+    function sorteia() {
+
+        return Math.round(Math.random() * 10);
+    }
+
+    function sorteiaNumeros(quantidade) {
+
+        var numero = []; //lista vazia
+        var valor = 1;
+        while (valor <= quantidade){
+
+
+            var numeroAleatorio = sorteia();
+            var achou = false;
+
+            if (numeroAleatorio !== 0){
+                for(var posicao = 0; posicao < numero.length; posicao++){
+
+                    if(numero[posicao] == numeroAleatorio){
+                        achou = true;
+                        break;
+                    }
+                }
+
+                if(achou == false){
+                    numero.push(numeroAleatorio); //Todo array possui a função push que permite "empurrar" elementos para dentro da lista.
+                    valor++;
+
+                }
+            }
+        
+        }
+
+            return  numero;
+    }
+    var numero = sorteiaNumeros(3); //os valores não se repetem
+    console.log(numero); //Para saber quais serão os itens gerados e mostrar uma mensagem para o desenvolvedor
+
+
+    
+    function verifica() {
+
+        var achou = false;
+
+        for (var posicao = 0; posicao < numero.length; posicao++) {
+
+            if (input.value == numero[posicao]) {
+
+                alert("Você ACERTOU!");
+                achou = true;
+                break;
+            }
+        }
+        if (achou == false) { //fora do looping, pois ao varrer a posição indicada e não encontrada a condição é atendida
+
+            alert("Você ERROU!");
+
+        }
+
+        input.value = ""; //zera o que está na caixa na tag input
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica; //ao clicar no botão ele executa a função verifica
+
+</script>
