@@ -2,7 +2,7 @@
     document.querySelector('#som_tecla_pom').play();
 }*/
 
-//document.querySelector('.tecla_pom').play();
+//document.querySelector('.tecla_pom').play(); ..
 
 function tocaSom (seletorAudio) {
     const elemento = document.querySelector(seletorAudio);
