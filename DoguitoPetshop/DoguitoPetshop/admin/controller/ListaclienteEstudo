@@ -1,0 +1,40 @@
+/*const tabela = document.querySelector('[data-tabela]')   /*percorre a árvore do DOM, criado o querySelector buscando um data-atributes que indica o tbody (elemento pai) que cria o tr (filho)*/
+
+/*export const listaClientes = () => {
+    /*const promise = new Promise((resolve, reject) =>{
+
+        const http = new XMLHttpRequest() /*Responsável pela comunicação*/
+
+       /* http.open('GET', 'http://localhost:3000/profile') /*abre a comunicação entre a aplicação e a API*/ /**função callback com assincronas*/
+
+       /* http.onload = () => {
+
+            if(http.status >= 400){
+                reject(JSON.parse(http.response))
+            } else{
+                resolve(JSON.parse(http.response))
+            }
+            
+            }
+            http.send()
+        });
+    return promise;*/
+
+    /*return fetch(`http://localhost:3000/profile`) /*retorna uma resposta, reduz retirando a promise e o XMLHttpRequest*/
+
+    /*.then(resposta => {
+        return resposta.json()
+    })
+}*/
+
+
+
+/*clienteService.listaClientes() /*devolve uma promessa 
+.then(data => {
+    /*const data = JSON.parse(http.response) /* parse faz do elemento um elemento js válido 
+
+    data.forEach(elemento => { /*iteração sobre os elementos para exibí-los nos campos "criaNovaLinha"*/
+    
+    /*tabela.appendChild(criaNovaLinha(elemento.nome,elemento.email))
+    /*appendChild coloca o tr dentro do tbody
+})})*/

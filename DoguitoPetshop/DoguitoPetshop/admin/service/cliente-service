@@ -1,0 +1,54 @@
+/*const listaClientes = () => {
+    /*const promise = new Promise((resolve, reject) =>{
+
+        const http = new XMLHttpRequest() /*Responsável pela comunicação*/
+
+       /* http.open('GET', 'http://localhost:3000/profile') /*abre a comunicação entre a aplicação e a API*/ /**função callback com assincronas*/
+
+       /* http.onload = () => {
+
+            if(http.status >= 400){
+                reject(JSON.parse(http.response))
+            } else{
+                resolve(JSON.parse(http.response))
+            }
+            
+            }
+            http.send()
+        });
+    return promise;*/
+
+   /* return fetch(`http://localhost:3000/profile`) /*retorna uma resposta, reduz retirando a promise e o XMLHttpRequest*/
+
+    /*.then(resposta => {
+        return resposta.json()
+    })
+}
+
+const criaCliente = (nome, email) => { 
+    return fetch(`http://localhost:3000/profile`, {
+        method: 'POST', 
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            nome: nome,
+            email: email
+        })
+    })
+    .then( resposta => {
+        return resposta.body
+    })
+}
+
+const removeCliente = (id) => { 
+    return fetch(`http://localhost:3000/profile/${id}`, {
+        method: 'DELETE'
+    })
+}
+
+export const clienteService = { 
+    listaClientes,
+    criaCliente, 
+    removeCliente
+}*/
